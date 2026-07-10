@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "HoribaControl"
+version = "0.1.0"
+description = "HORIBA MicroHR / Syncerity Control Software"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+authors = [
+    {name = "HonorineJJ"}
+]
+
+dependencies = [
+    "PyQt5>=5.15.11",
+    "PyQt5-Qt5>=5.15.16",
+    "pyqtgraph>=0.13.7",
+    "numpy>=2.0",
+    "scipy>=1.14",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+    "astropy>=6.1",
+    "opencv-python>=4.10",
+    "Pillow>=11.0",
+    "PyYAML>=6.0",
+    "colorlog>=6.9",
+    "psutil>=6.1",
+    "qasync>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-qt",
+    "black",
+    "ruff",
+    "mypy",
+    "pyinstaller"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
