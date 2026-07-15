@@ -1,0 +1,51 @@
+# requirements.txt
+
+```text
+# -----------------------------
+# HORIBA MicroHR Control
+# Windows 11
+# Python >= 3.11
+# -----------------------------
+
+# HORIBA SDK
+horiba-sdk>=1.2.0
+
+# GUI
+PySide6>=6.8.0
+
+# Graphiques
+matplotlib>=3.10.0
+numpy>=2.2.0
+
+# Images
+pillow>=11.0.0
+
+# Données
+pandas>=2.2.3
+
+# Fichiers FITS
+astropy>=7.0.0
+
+# Journalisation
+loguru>=0.7.3
+
+# Utilitaires
+psutil>=6.1.0
+overrides>=7.7.0
+
+# Calcul scientifique
+scipy>=1.15.0
+
+# Configuration
+PyYAML>=6.0.2
+
+# Export Excel
+openpyxl>=3.1.5
+
+# Tests
+pytest>=8.3.4
+
+# Style
+black>=24.10.0
+ruff>=0.8.4
+```
