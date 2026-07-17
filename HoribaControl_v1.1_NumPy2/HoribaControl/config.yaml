@@ -1,0 +1,45 @@
+instrument:
+  serial_number: "0340-0913-MHRA"
+  monochromator_index: 0
+  camera_index: 0
+  model: "MicroHR"
+  camera_model: "Syncerity"
+
+connection:
+  start_icl: true
+  icl_ip: "127.0.0.1"
+  icl_port: "25010"
+  enable_binary_messages: true
+  enable_sdk_logging: false
+
+camera:
+  exposure_time: 100
+  acquisition_count: 1
+  open_shutter: true
+  timeout_s: 120.0
+  poll_interval_s: 0.10
+  roi:
+    x_origin: 0
+    y_origin: 0
+    x_size: 1024
+    y_size: 256
+    x_bin: 1
+    y_bin: 256
+  x_axis_conversion: "FROM_ICL_SETTINGS_INI"
+
+motion:
+  timeout_s: 180.0
+  poll_interval_s: 0.10
+  initialize_on_connect: false
+
+scan:
+  start_nm: 500.0
+  stop_nm: 600.0
+  step_nm: 1.0
+  settle_time_s: 0.20
+  save_each_frame: false
+
+application:
+  simulation: false
+  output_directory: "data"
+  log_directory: "logs"
