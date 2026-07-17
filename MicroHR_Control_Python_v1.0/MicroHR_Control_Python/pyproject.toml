@@ -1,0 +1,32 @@
+[project]
+name = "microhr-control"
+version = "1.0.0"
+description = "Pilotage HORIBA MicroHR + Syncerity via EzSpec SDK"
+requires-python = ">=3.10"
+dependencies = [
+  "horiba-sdk>=1.0.3",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "PyYAML>=6.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5", "mypy>=1.10"]
+
+[project.scripts]
+microhr-control = "microhr_control.main:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
