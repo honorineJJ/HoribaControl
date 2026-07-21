@@ -1,0 +1,20 @@
+instrument:
+  serial_number: "0340-0913-MHRA"
+  model: "MicroHR"
+  connection: "USB"
+  camera_model: "Syncerity"
+
+application:
+  mode: "simulation"
+  output_directory: "data"
+  log_directory: "logs"
+
+simulation:
+  initial_wavelength_nm: 532.0
+  move_speed_nm_per_second: 100.0
+  detector_pixels: 1024
+  random_seed: 3400913
+
+acquisition:
+  exposure_ms: 100
+  center_wavelength_nm: 532.0
