@@ -1,0 +1,42 @@
+instrument:
+  serial_number: "0340-0913-MHRA"
+  model: "MicroHR"
+  connection: "USB"
+  camera_model: "Syncerity"
+  monochromator_index: 0
+  camera_index: 0
+
+application:
+  mode: "simulation"
+  output_directory: "data"
+  log_directory: "logs"
+
+ezspec:
+  start_icl: true
+  icl_ip: "127.0.0.1"
+  icl_port: "25010"
+  enable_binary_messages: true
+  enable_sdk_logging: false
+  discovery_timeout_s: 30.0
+  motion_timeout_s: 180.0
+  acquisition_timeout_s: 180.0
+  poll_interval_s: 0.10
+
+simulation:
+  initial_wavelength_nm: 532.0
+  move_speed_nm_per_second: 100.0
+  detector_pixels: 1024
+  random_seed: 3400913
+
+acquisition:
+  exposure_ms: 100
+  acquisition_count: 1
+  open_shutter: true
+  center_wavelength_nm: 532.0
+  roi:
+    x_origin: 0
+    y_origin: 0
+    x_size: 1024
+    y_size: 256
+    x_bin: 1
+    y_bin: 256
